@@ -11,7 +11,7 @@
         <section class="row mb-2">
             <div class="col-md-6">
                 <label for="salario">Salário</label>
-                <input type="text" name="salário" id="salário" class="form-control">
+                <input type="number" name="salario" id="salario" class="form-control">
 
             </div>
             
@@ -26,7 +26,9 @@
             <label for="departamento">Escolha o departamento do funcionário </label>
             <select name="departamento" id="departamento" class="form-select">
                 <option value="">Escolha um opção...</option>
-                <option value="1">Recursos Humanos</option>
+                {{#each dados}}
+                <option value="{{dataValues.id}}">{{dataValues.nome}}</option>
+                {{/each}}
             </select>
         </section>
 
